@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BrandLogo from '#lib/components/BrandLogo.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import { page } from '$app/state';
 	import type { SiteShell } from '#services/site/types';
@@ -18,6 +19,7 @@
 	<div class="page-container py-20 md:py-24">
 		<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 			<div class="lg:col-span-1">
+				<BrandLogo variant="footer" />
 				<p class="text-xl font-bold text-white">{shell.brand.name}</p>
 				<p class="mt-2 text-sm text-emerald-300/90">{shell.brand.tagline}</p>
 				<p class="mt-4 text-sm leading-relaxed">{shell.footerTagline}</p>

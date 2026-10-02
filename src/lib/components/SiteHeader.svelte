@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BrandLogo from '#lib/components/BrandLogo.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import { page } from '$app/state';
 	import type { NavItem, SiteShell } from '#services/site/types';
@@ -22,11 +23,7 @@
 >
 	<div class="page-container flex items-center justify-between gap-4 py-3">
 		<a href="/" class="group flex items-center gap-3 transition duration-300 hover:opacity-90">
-			<span
-				class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-800 text-sm font-bold text-white shadow-md ring-1 ring-white/20"
-			>
-				EV
-			</span>
+			<BrandLogo variant="header" />
 			<span class="flex flex-col leading-tight">
 				<span class="text-base font-bold tracking-tight text-white sm:text-lg">
 					{shell.brand.name}

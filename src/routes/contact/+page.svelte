@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BrandLogo from '#lib/components/BrandLogo.svelte';
 	import ContactForm from '#lib/components/contact/ContactForm.svelte';
 	import type { PageData } from './$types';
 
@@ -16,6 +17,7 @@
 <div class="contact-page bg-stone-50 pb-20 pt-24 md:pb-28 md:pt-28">
 	<div class="page-container">
 		<header class="mb-10 max-w-2xl lg:mb-14">
+			<BrandLogo variant="contact" />
 			<p class="eyebrow">Contact</p>
 			<h1 class="font-display mt-4 text-4xl font-bold tracking-tight text-stone-900 md:text-5xl lg:text-[3.25rem]">
 				{data.contactPage.title}
