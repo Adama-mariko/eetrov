@@ -6,7 +6,13 @@
 
 	let { shell }: { shell: SiteShell } = $props();
 
-	const faqHref = $derived(page.url.pathname === '/' ? '/#faq' : `${page.url.pathname}#faq`);
+	const faqHref = $derived.by(() => {
+		const path = page.url.pathname;
+		if (path === '/cabinet' || path === '/ong' || path === '/formations') {
+			return `${path}#faq`;
+		}
+		return '/#faq';
+	});
 
 	const solutions = [
 		{ label: 'Cabinet conseil', href: '/cabinet' },
