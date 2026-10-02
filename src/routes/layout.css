@@ -339,6 +339,51 @@ html.reveal-ready .motion-reveal:not(.motion-reveal--in).motion-reveal--right {
 	@apply mt-16 md:mt-20 lg:mt-24;
 }
 
+/* Bouton flottant scroll haut / bas */
+.scroll-fab {
+	@apply fixed bottom-6 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-emerald-700/30 bg-emerald-800 text-white shadow-lg shadow-emerald-950/35 transition hover:bg-emerald-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14;
+}
+
+.scroll-fab__ring {
+	@apply pointer-events-none absolute inset-0 rounded-full border border-white/20;
+}
+
+.scroll-fab__icon {
+	transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+	animation: scroll-fab-nudge-down 2.2s ease-in-out infinite;
+}
+
+.scroll-fab--up .scroll-fab__icon {
+	transform: rotate(180deg);
+	animation-name: scroll-fab-nudge-up;
+}
+
+@keyframes scroll-fab-nudge-down {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes scroll-fab-nudge-up {
+	0%,
+	100% {
+		transform: rotate(180deg) translateY(0);
+	}
+	50% {
+		transform: rotate(180deg) translateY(-5px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scroll-fab__icon {
+		animation: none;
+	}
+}
+
 .entity-page--cabinet .btn-primary {
 	@apply bg-teal-800 shadow-teal-900/25 hover:bg-teal-700;
 }

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '#lib/assets/logo.jpg';
+	import ScrollFab from '#lib/components/ScrollFab.svelte';
 	import SiteFooter from '#lib/components/SiteFooter.svelte';
 	import SiteHeader from '#lib/components/SiteHeader.svelte';
 	import { afterNavigate } from '$app/navigation';
@@ -35,4 +36,5 @@
 		{/key}
 	</main>
 	<SiteFooter shell={data} />
+	<ScrollFab />
 </div>
