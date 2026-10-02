@@ -10,14 +10,12 @@
 <section class="section-shell bg-stone-100">
 	<div class="page-container">
 		<div class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-stone-900/5 lg:grid lg:grid-cols-2">
-			<div
-				class="relative flex min-h-[16rem] items-center justify-center bg-stone-50 p-8 md:p-12 lg:min-h-[22rem] lg:p-14"
-			>
+			<div class="relative h-full min-h-[14rem] overflow-hidden sm:min-h-[18rem]">
 				<MediaImage
 					src={media.partner}
 					fallback={mediaLocal.partner}
-					alt="ECOVERSION Group"
-					class="max-h-48 w-full max-w-md object-contain md:max-h-56 lg:max-h-64"
+					alt=""
+					class="absolute inset-0 h-full w-full object-cover"
 					loading="lazy"
 				/>
 			</div>
